@@ -21,7 +21,7 @@ for (let i = 0; i < 5; i++) {
 console.log(numbersArray);
 
 // parte un timer di 30 secondi. 
-let seconds = 0;
+let seconds = 30;
 let userInputArray = [];
 let userInput;
 let score = 0;
@@ -29,8 +29,8 @@ let score = 0;
 
 
 const countDown = setInterval(function () {
-    if (seconds == 30) {
-        // console.log(seconds);
+    if (seconds == 0) {
+
         clearInterval(countDown)
         containerElementNumber.style.visibility = 'hidden'
         alert('Timer scaduto, riscrivi tutti i numeri (ogni numero ha un apposito spazio)')
@@ -52,6 +52,7 @@ const countDown = setInterval(function () {
     } else {
         seconds--
     }
+    console.log(seconds);
 }, 1000)
 
 
