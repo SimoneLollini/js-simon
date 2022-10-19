@@ -47,7 +47,7 @@ const countDown = setInterval(function () {
                     score++
                 }
             }
-            console.log("Hai totalizzato: " + score + " punti");
+            console.log("Numeri ricordati: " + score);
         }
     } else {
         seconds--
