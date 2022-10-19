@@ -29,7 +29,7 @@ let score = 0;
 
 
 const countDown = setInterval(function () {
-    if (seconds == 0) {
+    if (seconds == 30) {
         // console.log(seconds);
         clearInterval(countDown)
         containerElementNumber.style.visibility = 'hidden'
