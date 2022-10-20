@@ -5,6 +5,11 @@
 const containerElementNumber = document.querySelector('.container.random_number')
 const containerElementUserInput = document.querySelector('.container.user_input')
 // Visualizzare in pagina 5 numeri casuali
+// - dom element dove inserire i numeri casuali
+// - math.floor e math random => genero 5 numeri casuali
+// - uso innerHTML per stampare i numeri a schermo 
+
+
 function randomNumber(max) {
     return Math.ceil(Math.random() * max)
 }
@@ -21,7 +26,7 @@ for (let i = 0; i < 5; i++) {
 console.log(numbersArray);
 
 // parte un timer di 30 secondi. 
-let seconds = 30;
+let seconds = 1;
 let userInputArray = [];
 let userInput;
 let score = 0;
@@ -30,14 +35,14 @@ let score = 0;
 
 const countDown = setInterval(function () {
     if (seconds == 0) {
-
         clearInterval(countDown)
         containerElementNumber.style.visibility = 'hidden'
         alert('Timer scaduto, riscrivi tutti i numeri (ogni numero ha un apposito spazio)')
         generateUserArray()
-        // console.log(userInputArray.length == 5);
+        // console.log(userInputArray.length == 5); 
+        containerElementNumber.style.visibility = 'visible'
         if (userInputArray.length == 5) {
-            containerElementNumber.style.visibility = 'visible'
+
             for (let i = 0; i < userInputArray.length; i++) {
                 const number = userInputArray[i];
                 const numberEl = document.createElement('div')
